@@ -40,6 +40,9 @@ useEffect(() => {
     setDesignation(localStorage.getItem('Designation'))
     setProject(localStorage.getItem('Project'))
 },[])
+wbruybdbfhwuegryg
+
+
     return(
         <div>
                 <Form className="d-grid gap-2" style={{margin:"15rem"}}>
@@ -61,7 +64,6 @@ useEffect(() => {
                 </Form.Group>
                 <Button onClick={(e) => handleSubmit(e)} type="submit">Update</Button>
             </Form>
-
         </div>
     )
 }
