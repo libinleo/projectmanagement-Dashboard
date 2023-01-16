@@ -5,22 +5,25 @@ body {
 }
 h1, h2, p, ul, li {
   font-family: sans-serif;
+  
 }
 ul.header li {
   display: inline;
   list-style-type: none;
-  margin: 0;
+ 
 }
 ul.header {
-  background-color: #111;
-  padding: 0;
+  
+  padding-left: 85%;
+  margin-bottom: 10px;
 }
 ul.header li a {
-  color: #FFF;
+  color: rgb(14, 1, 1);
   font-weight: bold;
   text-decoration: none;
   padding: 20px;
   display: inline-block;
+  margin-bottom: -10px;
 }
 .content {
   background-color: #FFF;
@@ -33,6 +36,7 @@ ul.header li a {
 .content li {
   margin-bottom: 10px;
 }
+
 .active {
   background-color: #0099FF;
 }
