@@ -57,19 +57,6 @@ const create=() =>{
   });
   }
 // let history=useNavigate();
-// const handleSubmit = (e)=> {
-//     e.preventDefault();
-    
-
-//     const ids=uuid();
-//     let uniqueId=ids.slice(0,8);
-
-//     let a=name;
-//     let b=skills;
-//     let c=designation;
-//     let d=project;
-
-//     Employees.push({ id: uniqueId, Name : a, Skills :b, Designation:c,Project:d });
 
 //     history('/emphome')
 // }

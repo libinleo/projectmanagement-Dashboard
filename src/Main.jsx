@@ -4,7 +4,7 @@ import {
   NavLink,
   BrowserRouter,  
 } from "react-router-dom";
-
+import './Login/Login.css'
 import Login from "./Login/Login.jsx";
 import Signup from "./Login/Signup.jsx";
 import Emphome from "./employee/Emphome";
@@ -28,7 +28,7 @@ class Main extends Component {
               <Createemp/>
             }/>
             <Route path="/edit" element={
-              <Editemp/>
+              <Createemp/>
             }/>
             </Routes> 
           </BrowserRouter>
