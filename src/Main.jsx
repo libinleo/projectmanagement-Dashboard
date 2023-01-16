@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { 
   Route,Routes,
-  NavLink,
+
   BrowserRouter,  
 } from "react-router-dom";
 import './Login/Login.css'
@@ -10,7 +10,7 @@ import Signup from "./Login/Signup.jsx";
 import Emphome from "./employee/Emphome";
 import Editemp from "./employee/Editemp";
 import Createemp from "./employee/Createemp";
- 
+import Protectedroutes from "./RouteProtect";
 class Main extends Component {
   render() {
     return (
@@ -22,6 +22,7 @@ class Main extends Component {
                 <Emphome/>
               }/>
             <Route path="/" element={<Login/>}/>
+            
             <Route path="/register" element={<Signup/>}/>
 
             <Route path="/create" element={
@@ -29,6 +30,9 @@ class Main extends Component {
             }/>
             <Route path="/edit" element={
               <Createemp/>
+            }/>
+            <Route path="/emphome" element={
+              <Emphome/>
             }/>
             </Routes> 
           </BrowserRouter>

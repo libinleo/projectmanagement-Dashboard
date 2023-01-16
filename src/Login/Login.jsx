@@ -1,10 +1,12 @@
 import React, { Component ,useState} from 'react'
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import { Link } from "react-router-dom";
-
+import './Login.css'
 import axios from 'axios';
 // import { useHistory} from "react-router-dom";
 function Login() {
+  let navigate =useNavigate();
+
   const[username,setUsername]=useState('');
   const[password,setPassword]=useState('');
   const login=() =>{
@@ -14,6 +16,8 @@ function Login() {
    
       password:password
     }).then(function(response){
+      navigate('/emphome')
+
       console.log(response);
   
     })
@@ -24,7 +28,7 @@ function Login() {
 return (
   <>
   <h3 className='prm'>Project Resource Management</h3><br /><br /><br />
-  <form>
+  <form className='auth-wrapper'>
     {/* auth.inner */}
     <h3>Log In</h3>
     <div className="mb-3">
@@ -55,7 +59,7 @@ return (
         </label>
       </div>
     </div><br /><Link to='/emphome'>
-      <button type="submit" className="btn btn-primary" onClick={(e) => login(e)}>
+      <button type="button" className="btn btn-primary" onClick={(e) => login(e)}>
         Submit
       </button></Link>
     <p className="forgot-password text-right" >

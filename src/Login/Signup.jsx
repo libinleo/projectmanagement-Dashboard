@@ -56,7 +56,7 @@ const register=() =>{
           required onChange={(e) => setPassword(e.target.value)}/>
         </div><br />
         <div className="d-grid"><Link to='/login'>
-          <button type="submit" className="btn btn-primary"onClick={() => register()}>
+          <button type="button" className="btn btn-primary"onClick={() => register()}>
             Sign Up
           </button></Link>
         </div>

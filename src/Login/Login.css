@@ -21,12 +21,12 @@ body, html, .App, #root, .auth-wrapper {
 }
 
 
-.auth-wrapper {
-  /* display: flex; */
+/* .auth-wrapper {
+  display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: left;
-}
+} */
 .auth-inner {
   width: 450px;
   margin: auto;
@@ -35,10 +35,10 @@ body, html, .App, #root, .auth-wrapper {
   border-radius: 0px;
   transition: all .3s;
 }
-/* .auth-wrapper .form-control:focus {
+.auth-wrapper .form-control:focus {
   border-color: #01070e;
   box-shadow: none;
-} */
+}
 .auth-wrapper h3 {
   text-align: center;
   margin: 0;
@@ -59,4 +59,15 @@ body, html, .App, #root, .auth-wrapper {
 }
 .forgot-password a {
   color: #167bff;
+}
+.auth-wrapper{
+  padding: 40px 55px 45px 24px;
+  /* display: flex; */
+  justify-content: center;
+  flex-direction: column;
+  width: 450px;
+  margin: auto;
+  transition: all .3s;
+  padding-top: -50px;
+
 }

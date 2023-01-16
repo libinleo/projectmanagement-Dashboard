@@ -79,7 +79,7 @@ const create=() =>{
                     <Form.Control  value={project} type="text" placeholder="Enter Project name" required onChange={(e) => setProject(e.target.value)}>   
                     </Form.Control>
                 </Form.Group><Link to='/emphome'>
-                <Button onClick={() => editMode ? edit() : create()} type="submit">Submit</Button></Link>
+                <Button onClick={() => editMode ? edit() : create()} type="button">Submit</Button></Link>
             </Form>
         </div>
 

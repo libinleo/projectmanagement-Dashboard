@@ -74,7 +74,7 @@ function Emphome()
                                          <td>{item.emp_project}</td>
                                             <td>
                                             
-                                            <Button onClick={() => handleEdit(item.emp_id,item.emp_name,item.emp_skills,item.emp_designation,item.emp_project)}>Edit</Button>&nbsp;
+                                            <Button onClick={() => handleEdit(item.emp_id,item.emp_name,item.emp_skills,item.emp_designation,item.emp_project)} type="button">Edit</Button>&nbsp;
                                            <Button onClick={() => handleDelete(item.emp_id)}>Delete</Button>
                                              </td>
                                         </tr>
