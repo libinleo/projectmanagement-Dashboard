@@ -5,8 +5,6 @@ import './Login.css'
 import axios from 'axios';
 // import { useHistory} from "react-router-dom";
 function Login() {
-  let navigate =useNavigate();
-
   const[username,setUsername]=useState('');
   const[password,setPassword]=useState('');
   const login=() =>{
@@ -16,8 +14,6 @@ function Login() {
    
       password:password
     }).then(function(response){
-      navigate('/emphome')
-
       console.log(response);
   
     })
@@ -27,8 +23,8 @@ function Login() {
 }
 return (
   <>
-  <h3 className='prm'>Project Resource Management</h3><br /><br /><br />
-  <form className='auth-wrapper'>
+  {/* <div className='header'><h3 className='prm'>Project Resource Management</h3></div><br /><br /><br /> */}
+  <form className='auth-inner'>
     {/* auth.inner */}
     <h3>Log In</h3>
     <div className="mb-3">
@@ -59,7 +55,7 @@ return (
         </label>
       </div>
     </div><br /><Link to='/emphome'>
-      <button type="button" className="btn btn-primary" onClick={(e) => login(e)}>
+      <button type="submit" className="btn btn-primary" onClick={(e) => login(e)}>
         Submit
       </button></Link>
     <p className="forgot-password text-right" >

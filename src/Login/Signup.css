@@ -70,19 +70,14 @@ body, html, .App, #root, .auth-wrapper {
 .forgot-password a {
   color: #167bff;
 }
-.auth-inner{
+.auth-wrapper{
   padding: 40px 55px 45px 24px;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   flex-direction: column;
-  padding-bottom: 80%;
   width: 450px;
- 
+  margin: auto;
   transition: all .3s;
-  
+  padding-top: -50px;
 
-}
-.header{
-  justify-content: center;
-  padding-left: 36%;
 }

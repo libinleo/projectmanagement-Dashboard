@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { 
   Route,Routes,
-
+  NavLink,
   BrowserRouter,  
 } from "react-router-dom";
 import './Login/Login.css'
@@ -22,7 +22,7 @@ class Main extends Component {
                 <Emphome/>
               }/>
             <Route path="/" element={<Login/>}/>
-            
+            <Route path="/login" element={<Login/>}/>
             <Route path="/register" element={<Signup/>}/>
 
             <Route path="/create" element={
@@ -30,9 +30,6 @@ class Main extends Component {
             }/>
             <Route path="/edit" element={
               <Createemp/>
-            }/>
-            <Route path="/emphome" element={
-              <Emphome/>
             }/>
             </Routes> 
           </BrowserRouter>

@@ -1,6 +1,7 @@
 import React, { Component, useState} from 'react'
 import {Routes, Route, useNavigate,Link} from 'react-router-dom';
 import axios from 'axios';
+import './Signup.css'
   function Signup() {
     const navigate = useNavigate();
   // const navigateTo = () => history.push('/sign-in');
@@ -24,8 +25,8 @@ const register=() =>{
 }
     return (
       <>
-      <h3 className='prm'>Project Resource Management</h3><br /><br /><br />
-      <form>
+      {/* <h3 className='prm'>Project Resource Management</h3><br /><br /><br /> */}
+      <form className='auth-inner'>
         <h3>Sign Up</h3>
         <div className="mb-1">
           <label>Full name</label>
