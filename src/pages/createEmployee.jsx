@@ -69,9 +69,18 @@ const create=() =>{
                 <Form.Group className="mb-3" controlId="formDesignation"><label>Enter Employee Designation</label>
                     <Form.Control  value={designation} type="text"  required onChange={(e) => setDesignation(e.target.value)}>   
                     </Form.Control>
+<<<<<<< HEAD:src/pages/createEmployee.jsx
                 </Form.Group><br/>
                 <br/><Link to='/emphome'>
                 <Button onClick={() => editMode ? edit() : create()} type="submit">Submit</Button></Link>
+=======
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formAge">
+                    <Form.Control  value={project} type="text" placeholder="Enter Project name" required onChange={(e) => setProject(e.target.value)}>   
+                    </Form.Control>
+                </Form.Group><Link to='/emphome'>
+                <Button onClick={() => editMode ? edit() : create()} type="button">Submit</Button></Link>
+>>>>>>> 7376ef83d9411e5798ae629b62d84a5e4c7d771d:src/employee/Createemp.jsx
             </Form>
         </div>
 

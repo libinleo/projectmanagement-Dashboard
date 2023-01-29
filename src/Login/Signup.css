@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
 * {
   box-sizing: border-box;
@@ -9,7 +8,6 @@ body {
   display: flex;
   font-weight: 400;
   font-family: 'Fira Sans', sans-serif;
-  justify-content: center;
 }
 h1,h2,h3,h4,h5,h6,label,span {
   font-family: 'Fira Sans', sans-serif;
@@ -19,7 +17,7 @@ color: #167bff;
 align-content: center;
 
 }
-body, html, .App, #root, .auth-outer {
+body, html, .App, #root, .auth-wrapper {
   width: 100%;
   height: 100%;
 }
@@ -58,10 +56,6 @@ body, html, .App, #root, .auth-outer {
   padding-top: -800px;
   
 } */
-<<<<<<< HEAD:src/styles/adminLogin.css
-
-=======
->>>>>>> 7376ef83d9411e5798ae629b62d84a5e4c7d771d:src/Login/Login.css
 .custom-control-label {
   font-weight: 400;
 }
@@ -76,23 +70,14 @@ body, html, .App, #root, .auth-outer {
 .forgot-password a {
   color: #167bff;
 }
-.auth-inner{
+.auth-wrapper{
   padding: 40px 55px 45px 24px;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   flex-direction: column;
-  padding-bottom: 80%;
   width: 450px;
- 
+  margin: auto;
   transition: all .3s;
-  
+  padding-top: -50px;
 
 }
-.header{
-  justify-content: center;
-  padding-left: 36%;
-<<<<<<< HEAD:src/styles/adminLogin.css
-}
-=======
-}
->>>>>>> 7376ef83d9411e5798ae629b62d84a5e4c7d771d:src/Login/Login.css
