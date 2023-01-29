@@ -58,10 +58,7 @@ body, html, .App, #root, .auth-outer {
   padding-top: -800px;
   
 } */
-<<<<<<< HEAD:src/styles/adminLogin.css
 
-=======
->>>>>>> 7376ef83d9411e5798ae629b62d84a5e4c7d771d:src/Login/Login.css
 .custom-control-label {
   font-weight: 400;
 }
@@ -91,8 +88,4 @@ body, html, .App, #root, .auth-outer {
 .header{
   justify-content: center;
   padding-left: 36%;
-<<<<<<< HEAD:src/styles/adminLogin.css
 }
-=======
-}
->>>>>>> 7376ef83d9411e5798ae629b62d84a5e4c7d771d:src/Login/Login.css

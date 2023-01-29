@@ -62,11 +62,7 @@ function Emphome()
                                          
                                             <td>
                                             
-<<<<<<< HEAD:src/pages/employeeHome.jsx
                                             <Button onClick={() => handleEdit(item.emp_id,item.emp_name,item.emp_skills,item.emp_designation)}>Edit</Button>&nbsp;
-=======
-                                            <Button onClick={() => handleEdit(item.emp_id,item.emp_name,item.emp_skills,item.emp_designation,item.emp_project)} type="button">Edit</Button>&nbsp;
->>>>>>> 7376ef83d9411e5798ae629b62d84a5e4c7d771d:src/employee/Emphome.jsx
                                            <Button onClick={() => handleDelete(item.emp_id)}>Delete</Button>
                                              </td>
                                         </tr>

@@ -1,7 +1,7 @@
 import React, { Component ,useState} from 'react'
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import { Link } from "react-router-dom";
-import './Login.css'
+
 import axios from 'axios';
 // import { useHistory} from "react-router-dom";
 function LoginManager() {
@@ -26,17 +26,9 @@ function LoginManager() {
   });
 }
 return (
-<<<<<<< HEAD:src/pages/managerLogin.jsx
   <div>
   <form className='auth-inner'>
     <h3> Manager Log In</h3>
-=======
-  <>
-  {/* <div className='header'><h3 className='prm'>Project Resource Management</h3></div><br /><br /><br /> */}
-  <form className='auth-inner'>
-    {/* auth.inner */}
-    <h3>Log In</h3>
->>>>>>> 7376ef83d9411e5798ae629b62d84a5e4c7d771d:src/Login/Login.jsx
     <div className="mb-3">
       <label>Username</label>
       <input
