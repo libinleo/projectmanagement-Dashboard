@@ -8,7 +8,7 @@ function Projecthome()
 {
     const [details,setDetails]=useState([])   
      const getDetails=() =>{
-        axios.get('http://127.0.0.1:5000/getproject')
+        axios.get('http://127.0.0.1:5000/project')
         .then(function(response){
             setDetails(response.data)
             console.log(response);
@@ -21,15 +21,15 @@ function Projecthome()
         getDetails()
     },[])
     let navigate=useNavigate();
-    const handleEdit = (id, name, vertical,startdate,department,status) =>{
-        const params = {id, name, vertical,startdate,department,status};
+    const handleEdit = (id, name, vertical,start_date,department,status) =>{
+        const params = {id, name, vertical,start_date,department,status};
         navigate({
             pathname: '/createproject',
             search: `?${createSearchParams(params)}`
         })
     }
     const handleDelete=(id)=>{
-        axios.delete(`http://127.0.0.1:5000/deleteproject/${id}`)
+        axios.delete(`http://127.0.0.1:5000/project/${id}`)
         navigate(0);
     }
     return(
@@ -58,14 +58,14 @@ function Projecthome()
                                 details && details.length > 0 ? details.map((item) => {
                                 return(
                                     <tr>
-                                        <td>{item.proj_name}</td>
-                                         <td>{item.proj_vertical}</td>
-                                         <td>{item.proj_startdate}</td>
-                                         <td>{item.proj_department}</td>
-                                         <td>{item.proj_status}</td>
+                                        <td>{item.name}</td>
+                                         <td>{item.vertical}</td>
+                                         <td>{item.start_date}</td>
+                                         <td>{item.department}</td>
+                                         <td>{item.status}</td>
                                          <td>
-                                           <Button onClick={() => handleEdit(item.proj_id,item.proj_name,item.proj_vertical,item.proj_startdate,item.proj_department,item.proj_status)}>Edit</Button>&nbsp;
-                                           <Button onClick={() => handleDelete(item.proj_id)}>Delete</Button>
+                                           <Button onClick={() => handleEdit(item.id,item.name,item.vertical,item.start_date,item.department,item.status)}>Edit</Button>&nbsp;
+                                           <Button onClick={() => handleDelete(item.id)}>Delete</Button>
                                         </td>
                                     </tr>
                                     )                

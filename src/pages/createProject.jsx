@@ -13,7 +13,7 @@ function Createproject(){
             setEditMode(true);
             setName(searchParams.get('name'));
             setVertical(searchParams.get('vertical'));
-            setStartdate(searchParams.get('startdate'));
+            setStartdate(searchParams.get('start_date'));
             setDepartment(searchParams.get('department')) ; 
             setStatus(searchParams.get('status'))
         }
@@ -21,20 +21,17 @@ function Createproject(){
 console.log(editMode);
 const[name,setName]= useState("");
 const[vertical,setVertical]= useState("");
-// const[startdate,setStartdate]= useState("");
+const [startdate, setStartdate] = useState(new Date());
 const[department,setDepartment]= useState("");
 const[status,setStatus]= useState("");
-const [startdate, setStartdate] = useState(new Date());
-  
-     
 
 const createPro=() =>{
-    axios.post('http://127.0.0.1:5000/createproject',{
-      proj_name:name,
-      proj_vertical:vertical,
-      proj_startdate:startdate,
-      proj_department:department,
-      proj_status:status,     
+    axios.post('http://127.0.0.1:5000/project',{
+      name:name,
+      vertical:vertical,
+      start_date:startdate,
+      department:department,
+      status:status,     
     }).then(function(response){
         navigate('/projecthome')
       console.log(response); 
@@ -44,12 +41,12 @@ const createPro=() =>{
   });
   }
   const editPro=() =>{
-    axios.put(`http://127.0.0.1:5000/updateproject/${searchParams.get('id')}`,{
-        _proj_name:name,
-        _proj_vertical:vertical,
-        _proj_startdate:startdate,
-        _proj_department:department,
-        _proj_status:status,     
+    axios.put(`http://127.0.0.1:5000/project/${searchParams.get('id')}`,{
+        name:name,
+        vertical:vertical,
+        start_date:startdate,
+        department:department,
+        status:status,     
     }).then(function(response){
         // navigate('/emphome')
       console.log(response);  

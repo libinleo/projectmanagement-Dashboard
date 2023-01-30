@@ -14,20 +14,18 @@ function Createemp(){
             setEditMode(true);
             setName(searchParams.get('name'));
             setSkills(searchParams.get('skills'))
-            setDesignation(searchParams.get('designation'))
-            
+            setDesignation(searchParams.get('designation'))         
         }
     }, [])
-    
-    console.log(editMode);
+     console.log(editMode);
 const[name,setName]= useState("");
 const[skills,setSkills]= useState("");
 const[designation,setDesignation]= useState("");
 const create=() =>{
-    axios.post('http://127.0.0.1:5000/createemployee',{
-      emp_name:name,
-      emp_skills:skills,
-      emp_designation:designation,  
+    axios.post('http://127.0.0.1:5000/employee',{
+      name:name,
+      skills:skills,
+      designation:designation,  
     }).then(function(response){
         navigate('/emphome')
       console.log(response);
@@ -37,15 +35,14 @@ const create=() =>{
   });
   }
   const edit=() =>{
-    axios.put(`http://127.0.0.1:5000/updateemployee/${searchParams.get('id')}`,{
-      _emp_name:name,
-      _emp_skills:skills,
-      _emp_designation:designation,
+    axios.put(`http://127.0.0.1:5000/employee/${searchParams.get('id')}`,{
+      name:name,
+      skills:skills,
+      designation:designation,
       
     }).then(function(response){
         // navigate('/emphome')
-      console.log(response);
-  
+      console.log(response); 
     })
     .catch(function(error){
     console.log(error);
@@ -74,7 +71,6 @@ const create=() =>{
                 <Button onClick={() => editMode ? edit() : create()} type="submit">Submit</Button></Link>
             </Form>
         </div>
-
     )
 }
 export default Createemp;

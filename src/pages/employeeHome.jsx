@@ -8,7 +8,7 @@ function Emphome()
 {
     const [details,setDetails]=useState([])   
      const getDetails=() =>{
-        axios.get('http://127.0.0.1:5000/getemployee')
+        axios.get('http://127.0.0.1:5000/employee')
         .then(function(response){
             setDetails(response.data)
             console.log(response);
@@ -29,7 +29,7 @@ function Emphome()
         })
     }
     const handleDelete=(id)=>{
-        axios.delete(`http://127.0.0.1:5000/deleteemployee/${id}`)
+        axios.delete(`http://127.0.0.1:5000/employee/${id}`)
         navigate(0);
     }
     return(
@@ -56,14 +56,14 @@ function Emphome()
                                 details && details.length > 0 ? details.map((item) => {
                                 return(
                                         <tr>
-                                        <td>{item.emp_name}</td>
-                                         <td>{item.emp_skills}</td>
-                                         <td>{item.emp_designation}</td>
+                                        <td>{item.name}</td>
+                                         <td>{item.skills}</td>
+                                         <td>{item.designation}</td>
                                          
                                             <td>
                                             
-                                            <Button onClick={() => handleEdit(item.emp_id,item.emp_name,item.emp_skills,item.emp_designation)}>Edit</Button>&nbsp;
-                                           <Button onClick={() => handleDelete(item.emp_id)}>Delete</Button>
+                                            <Button onClick={() => handleEdit(item.id,item.name,item.skills,item.designation)}>Edit</Button>&nbsp;
+                                           <Button onClick={() => handleDelete(item.id)}>Delete</Button>
                                              </td>
                                         </tr>
                                     )

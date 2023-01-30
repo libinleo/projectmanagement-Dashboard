@@ -10,7 +10,7 @@ function LoginManager() {
   const[username,setUsername]=useState('');
   const[password,setPassword]=useState('');
   const managerLogin=() =>{
-    axios.post('http://127.0.0.1:5000/login',{
+    axios.post('http://127.0.0.1:5000/loginmanager',{
       
       username:username,
    
