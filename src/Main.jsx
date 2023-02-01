@@ -15,8 +15,6 @@ import Createemp from "./pages/createEmployee";
 import Projecthome from "./pages/projectHome";
 import Createproject from "./pages/createProject";
 
-
- 
 class Main extends Component {
   render() {
     return (
