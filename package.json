@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.2.2",
     "bootstrap": "^3.4.1",
+    "cdbreact": "^1.5.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-date-picker": "^9.2.0",

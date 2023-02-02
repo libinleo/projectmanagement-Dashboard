@@ -2,6 +2,9 @@ import React, { Component ,useState} from 'react'
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import { Link } from "react-router-dom";
 import axios from 'axios';
+import "./Login.css";
+
+
 
 // import { useHistory} from "react-router-dom";
 function Login() {
@@ -13,12 +16,13 @@ function Login() {
   const [popupStyle,showPopup] =useState("hide")
   const[username,setUsername]=useState('');
   const[password,setPassword]=useState('');
-  const login=() =>{
+  const login=(event) =>{
+    event.preventDefault();
     axios.post('http://127.0.0.1:5000/login',{
       username:username,  
       password:password
     }).then(function(response){
-      navigate('/emphome')
+      navigate('/dashboard')
 
       console.log(response);
   

@@ -3,8 +3,9 @@ import { FaBars ,
     FaTh,
     FaUserAlt,FaBookOpen
 } from "react-icons/fa";
+import "bootstrap/dist/css/bootstrap.css";
 import { CiLogout } from "react-icons/ci";
-
+import "./Dashboard.css"
 import { NavLink } from 'react-router-dom';
 
 const Sidebar = ({children}) => {
@@ -27,14 +28,14 @@ const Sidebar = ({children}) => {
             icon:<FaBookOpen/>
         },
         {
-            path:"/logout",
+            path:"/",
             name:"Logout",
             icon:<CiLogout/>
         },
     ]
   return (
     <div className='container'>
-        <div  style={{width: isOpen ? "250px" : "60px"}}className='sidebar'>
+        <div  style={{width: isOpen ? "300px" : "60px"}}className='sidebar'>
             <div className="top_section">
                 <h1 style={{display: isOpen ? "block" : "none"}} className='logo'>Logo</h1>
                 <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">

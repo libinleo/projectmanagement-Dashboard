@@ -1,7 +1,7 @@
 import React, { Component, useState} from 'react'
 import {Routes, Route, useNavigate,Link} from 'react-router-dom';
 import axios from 'axios';
-
+import "./Register.css";
   function Register() {
     const navigate = useNavigate();
   // const navigateTo = () => history.push('/sign-in');

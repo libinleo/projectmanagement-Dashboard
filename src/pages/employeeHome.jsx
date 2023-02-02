@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import{createSearchParams, Link,useNavigate} from 'react-router-dom'
 import axios from "axios";
 
+
 function Emphome()
 {
     const [details,setDetails]=useState([])   
@@ -33,6 +34,7 @@ function Emphome()
         navigate(0);
     }
     return(
+        
         <Fragment>
             
             <div style={{margin:"7rem"}}>
@@ -77,6 +79,7 @@ function Emphome()
                 
                 </div>
         </Fragment>
+        
     )
 }
 export default Emphome;
